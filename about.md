@@ -1,7 +1,11 @@
 ---
-layout: default-pwamp
-title: About
+layout: page
+title: About Practice Prescriptions
+navbar: display
+navbar_display: About
 permalink: /about/
+heading: Our Mission
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<h2 class="page-heading">{{page.heading}}</h2>
+<p>Your home base in the transition from collegiate student to practicing physician
