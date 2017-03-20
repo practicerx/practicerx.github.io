@@ -1,5 +1,6 @@
 ---
 layout: post
+number: "001"
 title:  "Welcome to Practice Rx"
 date:   2017-03-17 01:09:39 +0300
 categories:
