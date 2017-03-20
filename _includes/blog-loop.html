@@ -6,15 +6,16 @@
     <amp-accordion id="hidden-header" disable-session-states>
     {% for post in site.posts %}
       <section class="blog-post">
-        <div class="blog-meta">
+        <header class="blog-meta">
           <span class="post-no">001</span>
-          <a class="post-title post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <span class="post-title post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</span>
           <span class="post-meta post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
           <span class="expand">Read More</span>
-        </div>
+        </header>
 
         <article>
           <p class="post-excerpt">{{post.excerpt}}</p>
+          <a class="post-link" href="{{ post.url | relative_url }}">permalink</a>
         </article>
 
       </section>
