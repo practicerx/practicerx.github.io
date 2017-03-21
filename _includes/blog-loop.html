@@ -1,25 +1,28 @@
 <section id="blog-loop" class="cf frame wrapper">
   <div class="container">
 
-    <header class="section-header">From the Rx Pad</header>
+    <header class="section-header">Getting Started</header>
 
-    <amp-accordion id="hidden-header" disable-session-states>
+    <amp-accordion id="hidden-header">
+
     {% for post in site.posts %}
       <section class="blog-post">
+
         <header class="blog-meta">
           <span class="post-no">{{post.number}}</span>
-          <span class="post-title post-link" href="{{ post.url | relative_url }}">{{ post.title }}</span>
-          <span class="post-meta post-date">{{ post.date | date_to_string }}</span>
+          <span class="post-title">{{ post.title }}</span>
+          <span class="post-date">{{ post.date | date_to_string }}</span>
+          <div class="post-excerpt">
+            <p>{{post.excerpt}}</p>
+            <span class="expand">Read More
+              <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="12" width="12"></amp-img></a></span>
+          </div>
         </header>
 
-        <article>
-          <p class="post-excerpt">{{post.excerpt}}</p>
-          <span class="more"><a class="post-link" href="{{ post.url | relative_url }}">Read More</a></span>
-          <a class="post-link" href="{{ post.url | relative_url }}">permalink</a>
-        </article>
-
+        <article>{{post.content}}</article>
       </section>
     {% endfor %}
+
     </amp-accordion>
 
 <div class="items">
