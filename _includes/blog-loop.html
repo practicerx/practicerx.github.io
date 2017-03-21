@@ -11,15 +11,13 @@
         <header class="blog-meta">
           <span class="post-no">{{post.number}}</span>
           <span class="post-title">{{ post.title }}</span>
-          <span class="post-date">{{ post.date | date_to_string }}</span>
-          <div class="post-excerpt">
-            <p>{{post.excerpt}}</p>
-            <span class="expand">Read More
-              <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="12" width="12"></amp-img></a></span>
-          </div>
+          <time class="post-date" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+          <div class="expand">Read More
+            <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="12" width="12"></amp-img></a></div>
+          <div class="post-excerpt" expanded><p>{{post.excerpt}}</p></div>
         </header>
 
-        <article>{{post.content}}</article>
+        <article expanded itemscope itemtype="http://schema.org/BlogPosting" role="article">{{post.content}}</article>
       </section>
     {% endfor %}
 
