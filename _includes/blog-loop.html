@@ -12,8 +12,7 @@
           <h2 class="post-title">{{ post.title }}</h2>
           <time class="post-date" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
           <div class="post-excerpt"><p>{{post.excerpt}}</p></div>
-          <span class="expand">Read More
-            <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="16" width="16"></amp-img></a></span>
+          <div class="expand">Read More…</div>
         </header>
 
         <article itemscope itemtype="http://schema.org/BlogPosting" role="article">{{post.content}}</article>
