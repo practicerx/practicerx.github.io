@@ -6,6 +6,9 @@ url: "https://practicerx.github.io"
 twitter_username: practice_rx
 github_username:  practicerx
 
+# ASSETS
+logo-rx: /images/logo/rx-logo-medium.png
+
 # Build settings
 markdown: kramdown
 # theme: minima
