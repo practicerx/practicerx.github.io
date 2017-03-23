@@ -1,5 +1,5 @@
 <section id="blog-loop" class="cf frame wrapper">
-  <div class="container">
+  <div class="container cf">
 
     <header class="section-header">Getting Started</header>
 
@@ -9,15 +9,15 @@
       <section class="blog-post">
 
         <header class="blog-meta">
-          <span class="post-no">{{post.number}}</span>
-          <span class="post-title">{{ post.title }}</span>
+          <h2 class="post-title">{{ post.title }}</h2>
           <time class="post-date" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
-          <div class="expand">Read More
-            <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="12" width="12"></amp-img></a></div>
-          <div class="post-excerpt" expanded><p>{{post.excerpt}}</p></div>
+          <div class="post-excerpt"><p>{{post.excerpt}}</p></div>
+          <span class="expand">Read More
+            <a class="post-link" href="{{ post.url | relative_url }}"><amp-img src="/images/icons/link-dark-24.svg" alt="link" height="16" width="16"></amp-img></a></span>
         </header>
 
-        <article expanded itemscope itemtype="http://schema.org/BlogPosting" role="article">{{post.content}}</article>
+        <article itemscope itemtype="http://schema.org/BlogPosting" role="article">{{post.content}}</article>
+
       </section>
     {% endfor %}
 
