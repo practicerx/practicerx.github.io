@@ -9,7 +9,7 @@ tmp/
 
 google*.html
 assets/css
-assets/podcast
+assets/podcast/episodes
 images/sherpa*.svg
 references
 resources
@@ -21,6 +21,8 @@ _site
 _site/
 _drafts
 _includes/amp/components
+_includes/sandbox
+_includes/sand*.html
 _scripts
 .jekyll-metadata
 /.jekyll-metadata

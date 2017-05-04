@@ -1,6 +1,7 @@
 <!doctype html>
 <html ⚡>
 {% include head.html %}
+
 <body>
   <main class="page-content wrapper" aria-label="Content">
     {{ content }}
@@ -10,7 +11,7 @@
   {% include header.html %}
 
   {% include amp/analytics.html %}
-  
+
   <script async src="{{ "/assets/scripts/main.min.js" | relative_url }}"></script>
   <script async>
   if ('serviceWorker' in navigator) {
@@ -26,10 +27,10 @@
   });
 
   self.addEventListener('activate', function(event) {
-    // You're good to go!
+    // all good
   });
 
-  // You can pass a promise to event.waitUntil to extend the installation process.
+  // pass promise to event.waitUntil to extend the installation process.
   // Once activate fires, your service worker can control pages
   </script>
 </body>
